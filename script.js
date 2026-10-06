@@ -6,8 +6,9 @@ let bluriness = 100;
 
 const clearBlur = () => {
   if (load == 99) {
-    setInterval(() => {
+    const vanish = setInterval(() => {
       loadText.style.opacity = 0;
+      clearInterval(vanish);
     }, 100);
     clearInterval(tick);
   }
